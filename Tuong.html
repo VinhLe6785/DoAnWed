@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>  
+   <title>Mobile Legends Adventure</title>
+   <style type="text/css">
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      body {
+         font-family: Arial, sans-serif;
+         color: #222;
+         background: #DDDDDD; 
+         background-size: cover;
+         line-height: 1.6;
+      }
+      #menu {
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(0, 0, 139, 0.8);
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+         z-index: 1000;
+      }
+      #menu ul {
+         list-style-type: none;
+         text-align: center;
+         padding: 10px 0;
+      }
+      #menu li {
+         display: inline-block;
+         margin: 0 15px;
+      }
+      #menu ul li a {
+         color: #f1f1f1;
+         text-decoration: none;
+         font-weight: bold;
+         transition: color 0.3s;
+      }
+      #menu ul li a:hover {
+         color: #FFD700;
+      }
+      #menu ul li.download {
+         float: right;
+      }
+      #menu ul li.download a {
+         background-color: #FFD700;
+         padding: 10px 20px;
+         border-radius: 5px;
+         color: #000;
+      }
+      #menu ul li.download a:hover {
+         background-color: #FFA500;
+      }
+      h1 {
+         color: #000077;
+         text-align: center;
+         font-style: italic;
+         margin-top: 80px;
+         margin-bottom: 20px;
+      }
+      .content {
+         background: rgba(255, 255, 255, 0.8);
+         padding: 20px;
+         margin: 20px;
+         border-radius: 10px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      table {
+         border-collapse: collapse;
+         width: 100%;
+         margin: 20px 0;
+      }
+      th, td {
+         padding: 12px;
+         text-align: left;
+         border-bottom: 1px solid #ddd;
+      }
+      img {
+         max-width: 100%;
+         height: auto;
+         border-radius: 10px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .container1 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 20px 0;
+         height: 100vh;
+      }
+      .container2 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 10vmin;
+         overflow: hidden;
+         transform: skew(5deg);
+      }
+      .card {
+         flex: 1;
+         transition: all 1s ease-in-out;
+         height: 75vmin;
+         position: relative;
+         margin: 0 1em;
+      }
+      .img2 {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: all 1s ease-in-out;
+      }
+      .head {
+         color: black;
+         background: #FF00FF;
+         padding: 0.5em;
+         transform: rotate(-90deg);
+         transform-origin: 0% 0%;
+         transition: all 0.5s ease-in-out;
+         min-width: 100%;
+         text-align: center;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         font-size: 1em;
+         white-space: nowrap;
+      }
+
+
+
+      .img-large:hover {
+         transform: scale(1.1); /* Phóng to hình ảnh lên 1.5 lần */
+         transition: transform 0.3s ease; /* Áp dụng hiệu ứng chuyển động */
+         z-index: 1000; /* Đảm bảo hình ảnh lớn hiển thị trên các phần tử khác */
+      }
+      footer {
+         background: rgba(0, 0, 139, 0.8);
+         color: #f1f1f1;
+         text-align: center;
+         padding: 10px;
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         font-size: 0.9em;
+      }
+   </style>
+</head>
+<body>
+
+   <div id="menu">
+      <ul>
+         <li><a href="file:///D:/DoAnWed/01LayoutChung.html#">Trang chủ</a></li>
+         <li><a href="file:///D:/DoAnWed/Gioithieu.html#">Giới thiệu</a></li>
+         <li><a href="file:///D:/DoAnWed/TinTuc.html">Tin tức</a></li>
+         <li><a href="file:///D:/DoAnWed/Tuong.html#">Tướng</a></li>
+        
+         <li><a href="file:///D:/DoAnWed/FormCDKey.html">CD-Key</a> </li>
+         <li class="download"><a href="file:///D:/DoAnWed/Download.html">Download</a></li>        
+      </ul>
+   </div>
+
+   <img src="D:\DoAnWed\Images\hinh48.jpg" style="display: block; margin: 0 auto;" border="0" width="1350" height="700">
+   <p><h1>Cùng tìm hiểu về một số tướng nào!</h1>
+   <p><h2><u>Click chuột vào tướng để xem thông tin về tướng</u></h2></p>
+   <p><h1>Bậc SSR</h1>
+   <p><A href="file:///D:/DoAnWed/Morpheus.html" target="_blank">
+      <img class="img-large" src="D:\DoAnWed\Images\hinh49.jpg" alt="Morpheus"> 
+   </A>
+   <A href="file:///D:/DoAnWed/LaylaCoGiap.html" target="_blank">
+      <img class="img-large" src="D:\DoAnWed\Images\hinh50.jpg" alt="LaylaCoGiap"> 
+   </A>
+   <A href="file:///D:/DoAnWed/Rista.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh51.jpg" alt="Rista"> 
+</A>
+<A href="file:///D:/DoAnWed/EudoraLoiChan.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh52.jpg" alt="EudoraLoiChan"> 
+</A>
+<A href="file:///D:/DoAnWed/Hel.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh53.jpg" alt="Hel"> 
+</A>
+<A href="file:///D:/DoAnWed/Sekhet.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh54.jpg" alt="Sekhet"> 
+</A>
+<A href="file:///D:/DoAnWed/Thamuz.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh55.jpg" alt="Thamuz"> 
+</A>
+<A href="file:///D:/DoAnWed/Hanzo.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh56.jpg" alt="Hanzo"> 
+</A><A href="file:///D:/DoAnWed/Granger.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh57.jpg" alt="Granger"> 
+</A><A href="file:///D:/DoAnWed/Lylia.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh58.jpg" alt="Lylia"> 
+</A><A href="file:///D:/DoAnWed/Argus.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh59.jpg" alt="Argus"> 
+</A><A href="file:///D:/DoAnWed/Moskov.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh60.jpg" alt="Moskov"> 
+</A><A href="file:///D:/DoAnWed/Karina.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh61.jpg" alt="Karina"> 
+</A><A href="file:///D:/DoAnWed/Helcurt.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh62.jpg" alt="Helcurt"> 
+</A><A href="file:///D:/DoAnWed/Uranus.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh63.jpg" alt="Uranus"> 
+</A><A href="file:///D:/DoAnWed/Kimmy.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh64.jpg" alt="Kimmy"> 
+</A><A href="file:///D:/DoAnWed/Kagura.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh65.jpg" alt="Kagura"> 
+</A><A href="file:///D:/DoAnWed/Fanny.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh66.jpg" alt="Fanny"> 
+</A><A href="file:///D:/DoAnWed/Guinevere.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh67.jpg" alt="Guinevere"> 
+</A><A href="file:///D:/DoAnWed/Natalia.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh68.jpg" alt="Natalia"> 
+</A><A href="file:///D:/DoAnWed/Nana.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh69.jpg" alt="Nana"> 
+
+</A><A href="file:///D:/DoAnWed/Leslay.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh77.jpg" alt="Leslay"> 
+</A><A href="file:///D:/DoAnWed/Atlas.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh78.jpg" alt="Atlas"> 
+</A><A href="file:///D:/DoAnWed/Lolita.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh79.jpg" alt="Lolita"> 
+</A><A href="file:///D:/DoAnWed/ClaraDieuKi.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh80.jpg" alt="ClaraDieuKi"> 
+</A><A href="file:///D:/DoAnWed/Bai.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh81.jpg" alt="Bai"> 
+</A><A href="file:///D:/DoAnWed/MiyaThanTien.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh82.jpg" alt="MiyaThanTien"> 
+</A><A href="file:///D:/DoAnWed/Rafaela.html" target="_blank">
+   <img class="img-large" src="D:\DoAnWed\Images\hinh83.jpg" alt="Rafaela"> 
+</A>
+   <footer>
+      © 2024 Mobile Legends Adventure
+   </footer>
+</body>
+</html>

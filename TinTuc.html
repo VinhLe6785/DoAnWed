@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>  
+   <title>Mobile Legends Adventure</title>
+   <style type="text/css">
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      body {
+         font-family: Arial, sans-serif;
+         color: #222;
+         background: #DDDDDD; 
+         background-size: cover;
+         line-height: 1.6;
+      }
+      #menu {
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(0, 0, 139, 0.8);
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+         z-index: 1000;
+      }
+      #menu ul {
+         list-style-type: none;
+         text-align: center;
+         padding: 10px 0;
+      }
+      #menu li {
+         display: inline-block;
+         margin: 0 15px;
+      }
+      #menu ul li a {
+         color: #f1f1f1;
+         text-decoration: none;
+         font-weight: bold;
+         transition: color 0.3s;
+      }
+      #menu ul li a:hover {
+         color: #FFD700;
+      }
+      #menu ul li.download {
+         float: right;
+      }
+      #menu ul li.download a {
+         background-color: #FFD700;
+         padding: 10px 20px;
+         border-radius: 5px;
+         color: #000;
+      }
+      #menu ul li.download a:hover {
+         background-color: #FFA500;
+      }
+      h1 {
+         color: #000077;
+         text-align: center;
+         font-style: italic;
+         margin-top: 80px;
+         margin-bottom: 20px;
+      }
+      .content {
+         background: rgba(255, 255, 255, 0.8);
+         padding: 20px;
+         margin: 20px;
+         border-radius: 10px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      table {
+         border-collapse: collapse;
+         width: 100%;
+         margin: 20px 0;
+      }
+      th, td {
+         padding: 12px;
+         text-align: left;
+         border-bottom: 1px solid #ddd;
+      }
+      img {
+         max-width: 100%;
+         height: auto;
+         border-radius: 10px;
+         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .container1 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 20px 0;
+         height: 100vh;
+      }
+      .container2 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 10vmin;
+         overflow: hidden;
+         transform: skew(5deg);
+      }
+      .card {
+         flex: 1;
+         transition: all 1s ease-in-out;
+         height: 75vmin;
+         position: relative;
+         margin: 0 1em;
+      }
+      .img2 {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: all 1s ease-in-out;
+      }
+      .head {
+         color: black;
+         background: #FF00FF;
+         padding: 0.5em;
+         transform: rotate(-90deg);
+         transform-origin: 0% 0%;
+         transition: all 0.5s ease-in-out;
+         min-width: 100%;
+         text-align: center;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         font-size: 1em;
+         white-space: nowrap;
+      }
+      footer {
+         background: rgba(0, 0, 139, 0.8);
+         color: #f1f1f1;
+         text-align: center;
+         padding: 10px;
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         font-size: 0.9em;
+      }
+   </style>
+</head>
+<body>
+
+   <div id="menu">
+      <ul>
+         <li><a href="file:///D:/DoAnWed/01LayoutChung.html#">Trang chủ</a></li>
+         <li><a href="file:///D:/DoAnWed/Gioithieu.html#">Giới thiệu</a></li>
+         <li><a href="file:///D:/DoAnWed/TinTuc.html">Tin tức</a></li>
+         <li><a href="file:///D:/DoAnWed/Tuong.html#">Tướng</a></li>
+  
+         <li><a href="file:///D:/DoAnWed/FormCDKey.html">CD-Key</a> </li>
+         <li class="download"><a href="file:///D:/DoAnWed/Download.html">Download</a></li>        
+      </ul>
+   </div>
+
+   <img src="D:\DoAnWed\Images\hinh144.jpg" style="display: block; margin: 0 auto;" border="0" width="1350" height="700">
+   <h1>Thông tin cập nhật</h1>
+      <table>  
+      <tr style="background-color: white;">
+         <td>
+            <img class="img1" src="D:\DoAnWed\Images\hinh145.jpg">
+         </td>
+         <td>
+            <h2>"Cuộc đoàn tụ của chúng ta đã được định trước, thưa Chỉ huy. "
+
+Giới thiệu Lunox Liễu Loạn, anh hùng Hỗ trợ bậc Huyền thoại mới, phù hợp cho bất kỳ đội hình nào!
+
+Trong cuộc chiến chống lại Xâm Thực từ Nguyên Tố Tĩnh Lặng, Lunox đã hoàn toàn hợp nhất quyền năng Trật Tự và Hỗn Loạn, tiến hóa thành hình thái siêu việt nhất.
+
+CD-Key Anh Hùng mới : 23WHNS222CM
+Anh Hùng mới sẽ có mặt vào ngày:  29/03</h2>
+         </td>
+         
+      </tr>
+      <tr style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh146.jpg">
+         </td>
+         <td>
+            <h2>Sẵn sàng cho màn ra mắt của một anh hùng UR mới chưa ?! 
+CD-Key 500 kim cương đã sẵn sàng cho bạn, nhưng hãy nhớ đổi nó trước ngày 25/03!
+ 5Q2ASM222CX
+               
+            </h2>
+         </td>
+      </tr>
+      <tr style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh147.jpg">
+         </td>
+         <td>
+            <h2>Chào đón "Nữ Thần Trò Chơi" : [Mystia Mộng Mị]
+"Này bạn ơi! Tôi là Mystia, bạn thân mới của bạn đó!"
+Tướng Hỗ Trợ Huyền Thoại hoàn toàn mới, Mystia Mộng Mị đã ra mắt! Cô không chỉ có kỹ năng làm gián đoạn việc thi triển Chiêu Cuối mục tiêu mà còn giảm mạnh các đòn DPS của chúng!
+Được mệnh danh là Nữ Thần Trò Chơi
+Tướng Mới Khả Dụng Lúc: 02/02</h2>
+         </td>
+
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh148.jpg">
+         </td>
+         <td>
+            <h2>Coming Soon
+...
+Vị tướng tiếp theo có bậc UR sắp cập bến là... Bạn nghĩ đó có thể là ai? Và cô ấy thuộc loại nào và class nào? </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh149.jpg">
+         </td>
+         <td>
+            <h2>Akashic đã trở lại với diện mạo mới. Hãy tham gia cùng chúng mình và chiêm ngưỡng sự sáng tạo của skin huyền thoại mới! Cái nào khiến bạn ấn tượng nhất?
+Đây là mã ảo ảnh đầu tiên: DXYNLD</h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh150.jpg">
+         </td>
+         <td>
+            <h2>Nhà Thám Hiểm thân mến!
+
+Các bạn nghĩ sao về sự thay đổi của Tokinibara? Skin này có xứng đáng để sở hữu chứ?
+
+ Mật Mã Ảo Ảnh thứ ba: HGHM82 </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh151.jpg">
+         </td>
+         <td>
+            <h2>Các nhà thám hiểm thân mến!
+
+Tướng mới [Forseti | Portrait Demonstration]
+
+Sẽ được ra mắt vào ngày 14 tháng 7 trong bản cập nhật tới!
+               
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh152.jpg">
+         </td>
+         <td>
+            <h2>Trước khi Chúa Tể Vực thẳm biến mất, hắn đã gieo mầm bóng tối trên khắp Lục Địa Bình Minh. Giờ đây, những con quái vật khát máu đang tàn phá vùng đất này. 
+Chỉ khi kề vai sát cánh cùng nhau, chúng ta mới có thể đánh bại chúng và mang lại hòa bình cho Lục Địa Bình Minh! 
+Các nhà thám hiểm, hãy tham gia chuỗi sự kiện mới: Ám Minh Chi Dạ vào ngày 19/5
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh153.jpg">
+         </td>
+         <td>
+            <h2>"Ta cảm nhận được, giữa ta và ngươi có duyên phận."
+Tướng mới ra mắt vào ngày 12/05
+Tướng hỗn huyết mới - Astraia Sipra sẽ sớm xuất hiện để chia sẻ mong muốn chân thật nhất của cô ấy với các Nhà thám hiểm. 
+Điều gì sẽ xảy ra khi ánh sáng gặp bóng tối? 
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh154.jpg">
+         </td>
+         <td>
+            <h2>[Sự Ra Đời Của Bóng Tối - Leak Tướng Hợp Huyết mới!]
+"Mong muốn của tôi đang trở nên rõ ràng."
+Kết Giới Sắc Màu trở lại với một tướng Hợp Huyết mới, cũng là một người bạn cũ của chúng ta. 
+Đoán xem nhân vật nào sẽ tham gia hành trình của Nhà thám hiểm với thân phận mới?
+Kết Giới Sắc Màu Ra mắt vào ngày 12/05
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh155.jpg">
+         </td>
+         <td>
+            <h2>MỪNG ĐẠI LỄ 30/4 - 1/5 
+Kỳ nghỉ bắt đầu rồi các Nhà Thám Hiểm ơi!
+Hãy cùng Layla chúc mừng Đại Lễ 30/4 - 1/5 nào!
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh156.jpg">
+         </td>
+         <td>
+            <h2>[Skin Đặc Biệt của Quán Quân Silvana sắp có mặt!]
+Nhờ sự ủng hộ của các Nhà thám hiểm, Silvanna đã vinh quang trở thành Quán Quân cuộc thi Bình Chọn Minh Tinh và sắp được sở hữu skin mới cực cháy!
+Skin sẽ có mặt vào ngày 28/4 và có thể đổi bằng ''Thiên Tinh Ánh Thạch'' hoặc bán giới hạn trong shop skin (Giảm giá 50%)
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh157.jpg">
+         </td>
+         <td>
+            <h2>Mộng Điệp Thiên Linh - Skin Legend có thể nói là đẹp nhất ở thời điểm hiện tại sẽ quay trở lại vào ngày 28/4!
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh158.jpg">
+         </td>
+         <td>
+            <h2>Bạn đã sở hữu chiếc skin nào của Biệt Đội Hắc Ám này chưa?!
+"Hắc Cơ Dạ Tiễn"(Karihmet)
+"Hắc Sư Thao Khống" (Layla Cơ Giáp)
+"Hắc Giả Trí Tâm" (Estes) 
+"Hắc Luật Giới Nghiêm" (X.Borg). 
+Hoàn Thành Chiến Dịch 10-5 Để Mở Khoá.
+
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh159.jpg">
+         </td>
+         <td>
+            <h2>Chế độ mới "Tiếng Gọi Bình Minh" sắp ra mắt cùng nhiều lối chơi khác nhau và thử thách mới sẽ ra mắt vào ngày 19/4!
+Hãy xây dựng đội hình một cách khôn ngoan và càn quét các Chiến Trường!
+Hoàn Thành Chiến Dịch 27-40 Để Mở Khóa chế độ mới.
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh160.jpg">
+         </td>
+         <td>
+            <h2>[Huyền Thoại Kết Giới | Chương 4 - Sau Vùng Hoang Địa]
+Các Nhà Thám Hiểm hãy sẵn sàng đồng hành cùng Layla trong chuyến phiêu lưu mới nào! Tuy hành trình này không có skin Layla nhưng có thể nhận được Thánh Vật mới - Tư Thuẫn Ai Cát! 
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh161.jpg">
+         </td>
+         <td>
+            <h2>Skin Epic mới của Natalia sẽ ra mắt vào ngày 31/03! 
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh162.jpg">
+         </td>
+         <td>
+            <h2>[HOT! Leak thông tin các Thành Viên của QUNN]
+Các thành viên của nhóm nhạc thần tượng thế hệ mới QUNN là ai?!  Theo nguồn tin đáng tin cậy của Layla, QUNN sẽ debut vào ngày 31/03 sắp tới, cùng với đó là hàng loạt sự kiện đặc biệt! Hãy sẵn sàng!
+[Lesley - "Đương Đài Nghệ Nữ"]
+[Amaterasu - "Nhạc Diễm Huyết Vân"]
+[Odette - "Âm Vọng Mỹ Nhân"]
+[Hanabi - "Đại Hợp Tân Tú"]
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh163.jpg">
+         </td>
+         <td>
+            <h2>4 skin epic hoàn toàn mới sắp ra mắt!
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh164.jpg">
+         </td>
+         <td>
+            <h2>Tướng Natalia đã ra mắt!
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh165.jpg">
+         </td>
+         <td>
+            <h2>Nhiệm vụ mới? Đã rõ!"
+
+Natalia (Ánh Sáng/Đấu Sĩ) sắp có mặt tại Lục Địa Bình Minh
+Là một sát thủ, Natalia sống như một con sói cô độc, cô tin rằng sát thủ hoạt động một mình là tốt nhất.
+Tuy nhiên, trong nhiệm vụ mới, cô sẽ phải hợp tác với một Thợ săn quái vật... Đây là ai? Và câu chuyện gì sẽ xảy ra giữa họ?
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh166.jpg">
+         </td>
+         <td>
+            <h2>[Sương Mù và Bóng Đêm| Preview Tướng]
+
+Kết Giới Sắc Màu mùa mới "Sương Mù và Bóng Đêm" sẽ bắt đầu vào 10/3/2023 với 2 tướng mới!
+Hãy chuẩn bị sẵn sàng!
+            </h2>
+         </td>
+      </tr>
+      <tr  style="background-color: white;">
+         <td>
+            <img src="D:\DoAnWed\Images\hinh167.jpg">
+         </td>
+         <td>
+            <h2>Skin Epic mới của Arcus Miya sẽ ra mắt vào ngày 20/01. 
+Mã rương: FGZCWJ
+            </h2>
+         </td>
+      </tr>
+   </table>
+
+   <footer>
+      © 2024 Mobile Legends Adventure
+   </footer>
+</body>
+</html>

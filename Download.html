@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+    }
+    h1 {
+    color: #000077;
+    text-align: center;
+    font-style: italic;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #a2e5f2;
+        padding: 15px 100px;
+    }
+
+    .title {
+        margin: 20px 100px;
+    }
+
+    .title h1 {
+        font-size: 2.5em;
+        color: #333;
+    }
+
+    .line {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .label {
+        text-align: right;
+        flex: 40%;
+        padding-right: 10px;
+        font-weight: bold;
+    }
+
+    .text {
+        text-align: left;
+        flex: 60%;
+        margin-left: 7px;
+    }
+
+    .text input, .text select {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    #button {
+        width: 50%;
+        padding: 10px;
+        background: #00bcd4;
+        border: none;
+        color: #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    #button:hover {
+        background: #0097a7;
+    }
+
+    #hr {
+        border-top: 2px solid rgb(185, 185, 185);
+        width: 70%;
+        margin: 20px auto;
+    }
+
+    .modal, .modal-two {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content, .modal-content-two {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        border-radius: 10px;
+        animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .close, .close-two {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover, .close:focus, .close-two:hover, .close-two:focus {
+        color: black;
+        text-decoration: none;
+    }
+
+    #thongtindanhgia, #thongtindanhgia-two {
+        background: #000077;
+        color: white;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        margin-top: 20px;
+        border-bottom: 2px solid black;
+        line-height: 50px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .modal-content ul li, .modal-content-two ul li {
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    .highlight {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    footer {
+        background: rgba(0, 0, 139, 0.8);
+        color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 0.9em;
+    }
+</style>
+<script>
+    function kiemtra() {
+        var email = document.getElementsByName('em')[0].value.trim();
+        var password = document.getElementsByName('pasword')[0].value.trim();
+        var confirmPassword = document.getElementsByName('Enterpasword')[0].value.trim();
+        var ho = document.getElementsByName('txtHo')[0].value.trim();
+
+        var re = /\S+@\S+\.\S+/;
+        if (email === "" || !re.test(email)) {
+            alert("Bạn chưa nhập email hoặc email không hợp lệ.");
+            document.getElementsByName('em')[0].focus();
+            return false;
+        }
+
+        if (password.length < 2) {
+            alert('Mật khẩu phải có ít nhất 2 ký tự.');
+            document.getElementsByName('pasword')[0].focus();
+            return false;
+        }
+
+        if (password !== confirmPassword) {
+            alert('Mật khẩu và xác nhận mật khẩu không khớp.');
+            document.getElementsByName('Enterpasword')[0].focus();
+            return false;
+        }
+
+        if (ho == "") {
+            alert('Bạn chưa nhập tên đăng nhập.');
+            document.getElementsByName('txtHo')[0].focus();
+            return false;
+        }
+
+        return true;
+    }
+
+    function displayfeedback() {
+        if (kiemtra()) {
+            var email = document.getElementsByName('em')[0].value.trim();
+            var password = document.getElementsByName('pasword')[0].value.trim();
+            var ho = document.getElementsByName('txtHo')[0].value.trim();
+
+            document.getElementById('email-info').innerHTML = 'Gmail của bạn: <span class="highlight">' + email + '</span><span class="highlight"></span>';
+            document.getElementById('matkhau-info').innerText = 'Mật khẩu: ' + password;
+            document.getElementById('ho-info').innerText = 'Tên đăng nhập: ' + ho;
+
+            var modal = document.getElementById('feedback-modal');
+            modal.style.display = 'flex';
+        } else {
+            document.getElementById('errorlist-info').innerText = 'Thông tin đăng ký không hợp lệ';
+            document.getElementById('matkhauerror-info').innerText = 'Mật khẩu gõ lại không trùng khớp';
+            document.getElementById('emailthaytheerror-info').innerText = 'Địa chỉ email không hợp lệ';
+
+            var modalTwo = document.getElementById('feedback-modal-two');
+            modalTwo.style.display = 'flex';
+        }
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('feedback-modal');
+        modal.style.display = 'none';
+    }
+
+    function closeModalTwo() {
+        var modalTwo = document.getElementById('feedback-modal-two');
+        modalTwo.style.display = 'none';
+    }
+</script>
+</head>
+<body>
+<header>
+ 
+  
+</header>
+
+
+    <h1>Đăng kí tài khoản</h1>
+
+
+<div id="hr"></div>
+
+<br>
+
+<form onsubmit="return kiemtra()" name="dangky">
+    <div class="line">
+        <div class="label">
+            <p>Gmail của bạn: </p>
+        </div>
+        <div class="text">
+            <input id="windowIdInput" type="text" name="em"> 
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="label">Mật khẩu:</div>
+        <div class="text">
+            <input type="password" name="pasword">
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="label">Ghi lại mật khẩu:</div>
+        <div class="text">
+            <input type="password" name="Enterpasword">
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="label">Tên đăng nhập:</div>
+        <div class="text">
+            <input type="text" name="txtHo">
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="label"></div>
+        <div class="text">
+            <input type="submit" id="button" value="Đăng kí" onclick="displayfeedback(); return false;">
+        </div>
+    </div>
+</form>
+
+<div id="feedback-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="thongtindanhgia">
+            <h2 id="thongtin">Thông tin đăng ký</h2>
+        </div>
+        <div id="content-info">
+            <ul>
+                <li id="email-info"></li>
+                <li id="matkhau-info"></li>
+                <li id="ho-info"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="feedback-modal-two" class="modal-two">
+    <div class="modal-content-two">
+        <span class="close-two" onclick="closeModalTwo()">&times;</span>
+        <div id="thongtindanhgia-two">
+            <h2 id="thongtin-two">Thông tin đăng ký không hợp lệ</h2>
+        </div>
+        <div id="content-info-two">
+            <ul>
+                <li id="errorlist-info"></li>
+                <li id="matkhauerror-info"></li>
+                <li id="emailthaytheerror-info"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2024 Mobile Legends Adventure
+</footer>
+
+</body>
+</html>
